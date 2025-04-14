@@ -1,0 +1,116 @@
+/* Color Change Variable */
+:root {
+  --thinkable-color: #000000; /* Default color */
+}
+
+/* Grid Layout */
+.load_grid {
+  display: grid;
+}
+
+/* Clock Animation & Text Highlight */
+@keyframes blink {
+  0% { opacity: 1; }
+  49% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 0; }
+}
+.colon {
+  animation: blink 1s infinite;
+}
+/* Text Highlight */
+::selection {
+  color: #ffffff; 
+  background: #000000;
+}
+
+/* Accordion Styles */
+.accordion__item.active > .accordion-header:after {
+  transform: rotate(0deg);
+}
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.accordion-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+}
+.accordion-icon {
+  transition: transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transform: rotate(0deg);
+  margin-left: auto;
+}
+
+/* Underline Link Animations */
+a[id*="underline-link"] {
+  position: relative !important;
+  text-decoration: none !important;
+}
+a[id*="underline-link"]::after {
+  content: '' !important;
+  position: absolute !important;
+  width: 100% !important;
+  height: 1px !important;
+  bottom: -1px !important;
+  left: 0 !important;
+  background-color: currentColor !important;
+  transform: scaleX(0) !important;
+  transform-origin: right !important;
+  transition: transform 0.3s ease !important;
+  pointer-events: none !important;
+}
+a[id*="underline-link"]:hover::after {
+  transform: scaleX(1) !important;
+  transform-origin: left !important;
+}
+/* Different distances */
+#underline-link-4::after {
+  bottom: -4px !important;
+}
+#underline-link-6::after {
+  bottom: -6px !important;
+}
+#underline-link-8::after {
+  bottom: -8px !important;
+}
+
+/* Image Stack Styles */
+.image-stack {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%; /* 1:1 Aspect ratio */
+  background-color: currentColor;
+}
+.blend-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: currentColor;
+  z-index: 1;
+}
+.stack-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  mix-blend-mode: screen;
+  z-index: 2;
+}
+.stack-image.active {
+  opacity: 1;
+}
+/* Add a spacer div after the container to create scroll length */
+.scroll-spacer {
+  height: 100vh; /* Adjust this value to control total scroll length */
+}
