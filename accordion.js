@@ -1,4 +1,4 @@
-        document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener('DOMContentLoaded', function() {
             const accordionTriggers = document.querySelectorAll('.accordion-trigger');
             
             function closeOtherAccordions(currentAccordion) {
