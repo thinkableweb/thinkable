@@ -429,13 +429,7 @@ input[type="range"]::-webkit-slider-thumb {
 /* Completion Screen */
 .completion-screen {
   text-align: left;
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  background-color: var(--white);
-  z-index: 76;
-  display: flex;
 }
 
 .completion-content {
