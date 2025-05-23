@@ -116,7 +116,7 @@ p {
   background-color: var(--thinkable-color);
   color: var(--white);
   border: none;
-  border-radius: 0; /* Remove corner radius */
+  border-radius: 200px; /* Remove corner radius */
   cursor: pointer;
   transition: all 0.2s ease;
 }
