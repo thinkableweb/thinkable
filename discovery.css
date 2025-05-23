@@ -1,0 +1,515 @@
+:root {
+  --thinkable-color: #111111; /* Your main brand color */
+  --thinkable-color-50: rgba(17, 17, 17, 0.5); /* 50% opacity for placeholders */
+  --white: #ffffff;
+  --success-color: #00c853;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--thinkable-color);
+}
+
+/* Wrapper and column classes */
+.copy-wrap {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.body-clm {
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Password Protection Styles */
+.password-protection-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+  z-index: 76;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.password-container {
+  background-color: var(--white);
+  padding: 40px 20px;
+  width: 80%;
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Apply your text classes in HTML instead */
+.password-container h1,
+.form-header h1 {
+  padding-right: 80px;
+  padding-bottom: 20px;
+  padding-left: 80px;
+  color: var(--thinkable-color);
+  width: 100%;
+}
+
+.password-container p,
+.subtitle,
+.helper-text,
+p {
+  color: var(--thinkable-color);
+}
+
+.password-form {
+  text-align: center;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.password-form .form-group {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.password-form input {
+  text-align: center;
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--thinkable-color);
+  border-radius: 0;
+  transition: border-width 0.2s ease, 
+              border-color 0.2s ease,
+              padding-top 0.3s ease,
+              padding-bottom 0.3s ease;
+  background-color: transparent;
+  color: var(--thinkable-color);
+}
+
+.password-form input::placeholder {
+  opacity: 0.5;
+}
+
+.password-form input:focus {
+  outline: none;
+  border-width: 2px;
+  border-color: var(--thinkable-color);
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
+.password-form .btn {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--thinkable-color);
+  color: var(--white);
+  border: none;
+  border-radius: 0; /* Remove corner radius */
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.password-form .btn:hover {
+  opacity: 0.5;
+}
+
+.error-message {
+  color: var(--thinkable-color);
+  margin-top: 10px;
+  min-height: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  width: 100%;
+}
+
+.error-message.visible {
+  opacity: 1;
+}
+
+/* Shake animation for wrong password */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.shake {
+  animation: shake 0.6s ease;
+}
+
+/* Container */
+.brand-discovery-container {
+  margin: 0px auto;
+  background-color: var(--white);
+  position: relative;
+  /* No shadow, no radius as requested */
+}
+
+/* Form Header */
+.form-header {
+  margin-bottom: 60px;
+  border-bottom: 1px solid var(--thinkable-color);
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+.subtitle {
+  color: var(--thinkable-color);
+}
+
+/* Form Sections */
+.form-section {
+  display: none;
+  width: 100%;
+}
+
+.form-section.active {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section-header {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.section-header h2 {
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.section-desc {
+  color: var(--thinkable-color);
+  width: 100%;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 35px;
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 25px;
+  color: var(--thinkable-color);
+  width: 100%;
+}
+
+.helper-text {
+  color: var(--thinkable-color);
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 15px 15px; /* Initial padding */
+  border: 1px solid var(--thinkable-color);
+  border-radius: 0;
+  /* Added padding to transition */
+  transition: border-width 0.2s ease, 
+              border-color 0.2s ease, 
+              padding-top 0.3s ease,
+              padding-bottom 0.3s ease;
+  background-color: transparent;
+  color: var(--thinkable-color);
+  box-shadow: none;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+textarea::placeholder {
+  color: var(--thinkable-color);
+  opacity: 0.5;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  outline: none;
+  border-width: 2px;
+  border-color: var(--thinkable-color);
+  /* Increased padding top and bottom by 5px */
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.word-inputs {
+  margin-top: 25px;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.word-inputs input {
+  flex: 1;
+}
+
+.competitor-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+/* Range Slider */
+.rating-container {
+  position: relative;
+  padding: 10px 0 30px;
+  width: 100%;
+}
+
+input[type="range"] {
+  width: 100%;
+  -webkit-appearance: none;
+  height: 1px;
+  background: var(--thinkable-color);
+  outline: none;
+  margin: 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 200px;
+  margin-left: -5px;
+  background: var(--thinkable-color);
+  cursor: pointer;
+}
+
+.rating-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: var(--thinkable-color);
+  width: 100%;
+}
+
+.rating-value-display {
+  position: absolute;
+  right: 0;
+  font-weight: 600;
+  color: var(--thinkable-color);
+}
+
+/* Brand Personality Slider Styles */
+.personality-slider-group {
+  margin-bottom: 40px;
+  border-radius: 0;
+  width: 100%;
+}
+
+.personality-slider-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.slider-label-left,
+.slider-label-right {
+  color: var(--thinkable-color);
+}
+
+.personality-description {
+  margin-bottom: 10px;
+  color: var(--thinkable-color);
+  width: 100%;
+}
+
+.personality-slider-container {
+  position: relative;
+  width: 100%;
+}
+
+.personality-slider {
+  width: 100%;
+  -webkit-appearance: none;
+  height: 2px;
+  background: var(--thinkable-color);
+  outline: none;
+  margin: 10px 0 20px 0;
+}
+
+.personality-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--thinkable-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.personality-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+.personality-slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--thinkable-color);
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.personality-slider::-moz-range-thumb:hover {
+  transform: scale(1.1);
+}
+
+.personality-slider-value {
+  text-align: center;
+  color: var(--thinkable-color);
+  margin-top: 5px;
+  opacity: 0.5;
+}
+
+/* Navigation Buttons */
+.form-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.btn {
+  padding: 12px 50px;
+  border-radius: 200px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.btn-next, .btn-submit {
+  background-color: var(--thinkable-color);
+  color: var(--white);
+  margin-left: auto;
+}
+
+.btn-back {
+  background-color: transparent;
+  color: var(--thinkable-color);
+  border: 1px solid var(--thinkable-color); /* Full opacity border */
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Completion Screen */
+.completion-screen {
+  text-align: left;
+  width: 100%;
+}
+
+.completion-content {
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.completion-screen h2 {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.completion-screen p {
+  margin-bottom: 15px;
+  max-width: 100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Utilities */
+.hidden {
+  display: none;
+}
+
+/* separator */
+.separator {
+  max-width: 100%;
+  height: 1px;
+   margin-top: 15px;
+   margin-bottom: 15px;
+   background-color: var(--thinkable-color);
+   opacity: 0.3;
+   
+}
+
+/* Error styling */
+.error {
+  border-color: #ff3333 !important;
+  background-color: rgba(255, 51, 51, 0.05) !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .competitor-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .word-inputs {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-nav {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 1px;
+  }
+  
+  .btn {
+    width: 30%;
+    padding: 12px 50px;
+    justify-content: center;
+  }
+  
+  .btn-next, .btn-submit {
+    margin-left: 0;
+  }
+  
+  .personality-slider-group {
+    padding: 15px;
+  }
+  
+  .personality-slider-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .slider-label-right {
+    align-self: flex-end;
+  }
+}
