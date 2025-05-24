@@ -111,9 +111,9 @@ p {
 .password-form .btn {
   width: 100%;
   padding: 14px;
+  border-radius: 200px;
   background-color: var(--thinkable-color);
   color: var(--white);
-  border-radius: 200px; /* Remove corner radius */
   cursor: pointer;
   transition: all 0.2s ease;
 }
