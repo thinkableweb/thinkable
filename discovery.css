@@ -20,8 +20,8 @@ body {
 .copy-wrap {
   width: 100%;
   max-width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 0px;
+  padding-right: 0px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -151,8 +151,8 @@ p {
 
 /* Container */
 .brand-discovery-container {
-  margin-top: 140px;
-  margin-bottom: 100px;
+  padding-top: 140px;
+  padding-bottom: 100px;
   min-height: 80vh;
   background-color: var(--white);
   position: relative;
