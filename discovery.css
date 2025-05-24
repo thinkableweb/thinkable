@@ -17,7 +17,7 @@ body {
 }
 
 /* Wrapper and column classes */
-.copy-wrap {
+/*.copy-wrap {
   width: 100%;
   max-width: 100%;
   padding-left: 0px;
@@ -151,9 +151,6 @@ p {
 
 /* Container */
 .brand-discovery-container {
-  padding-top: 140px;
-  padding-bottom: 100px;
-  min-height: 80vh;
   background-color: var(--white);
   position: relative;
   /* No shadow, no radius as requested */
