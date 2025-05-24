@@ -60,6 +60,8 @@ body {
 .password-container h1,
 .form-header h1 {
   padding-bottom: 20px;
+  padding-left: 0px;
+  padding-right: 0px;
   color: var(--thinkable-color);
   width: 100%;
 }
