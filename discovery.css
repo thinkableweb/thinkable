@@ -151,7 +151,9 @@ p {
 
 /* Container */
 .brand-discovery-container {
-  margin: 0px auto;
+  margin-top: 140px;
+  margin-bottom: 100px;
+  min-height: 80vh;
   background-color: var(--white);
   position: relative;
   /* No shadow, no radius as requested */
