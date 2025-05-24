@@ -59,7 +59,6 @@ body {
 /* Apply your text classes in HTML instead */
 .password-container h1,
 .form-header h1 {
-  padding-right: 80px;
   padding-bottom: 20px;
   padding-left: 80px;
   color: var(--thinkable-color);
