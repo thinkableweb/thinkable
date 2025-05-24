@@ -60,7 +60,6 @@ body {
 .password-container h1,
 .form-header h1 {
   padding-bottom: 20px;
-  padding-left: 80px;
   color: var(--thinkable-color);
   width: 100%;
 }
@@ -114,7 +113,6 @@ p {
   padding: 14px;
   background-color: var(--thinkable-color);
   color: var(--white);
-  border: none;
   border-radius: 200px; /* Remove corner radius */
   cursor: pointer;
   transition: all 0.2s ease;
