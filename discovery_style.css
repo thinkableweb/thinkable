@@ -17,7 +17,7 @@ body {
 }
 
 /* Wrapper and column classes */
-/*.copy-wrap {
+.copy-wrap {
   width: 100%;
   max-width: 100%;
   padding-left: 0px;
@@ -33,7 +33,7 @@ body {
   margin-right: auto;
 }
 
-/* Password Protection Styles */
+/* Password Protection Styles - Updated */
 .password-protection-layer {
   position: fixed;
   top: 0;
@@ -45,7 +45,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-   text-align: center;
+  text-align: center;
   transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
@@ -53,20 +53,28 @@ body {
   background-color: var(--white);
   padding: 40px 20px;
   width: 80%;
+  max-width: 600px; /* Add max-width for better control */
   text-align: center;
   animation: fadeIn 0.5s ease;
 }
+
+/* Fix H1 title centering across all breakpoints */
 .password-container h1,
 .form-header h1 {
+  text-align: center !important;
+  padding: 0 !important; /* Remove all padding */
   padding-bottom: 20px;
   color: var(--thinkable-color);
   width: 100%;
 }
+
 .password-container p,
 .subtitle,
 .helper-text,
 p {
   color: var(--thinkable-color);
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 .password-form {
@@ -106,12 +114,14 @@ p {
   padding-bottom: 17px;
 }
 
+/* Add full corner radius to Begin Discovery button */
 .password-form .btn {
   width: 100%;
-  padding: 18px 18px;
-  border-radius: 200px !important;
+  padding: 12px 15px;
+  border-radius: 50px !important; /* Full corner radius */
   background-color: var(--thinkable-color);
   color: var(--white);
+  border: none;
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -127,6 +137,7 @@ p {
   opacity: 0;
   transition: opacity 0.3s ease;
   width: 100%;
+  text-align: center;
 }
 
 .error-message.visible {
@@ -388,6 +399,16 @@ input[type="range"]::-webkit-slider-thumb {
   opacity: 0.5;
 }
 
+/* Separator */
+.separator {
+  max-width: 100%;
+  height: 1px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: var(--thinkable-color);
+  opacity: 0.3;
+}
+
 /* Navigation Buttons */
 .form-nav {
   display: flex;
@@ -455,6 +476,35 @@ input[type="range"]::-webkit-slider-thumb {
   background-color: rgba(255, 51, 51, 0.05) !important;
 }
 
+/* Responsive adjustments for password protection */
+@media (max-width: 768px) {
+  .password-container {
+    width: 90%;
+    padding: 30px 15px;
+  }
+  
+  .password-container h1 {
+    text-align: center !important;
+    padding: 0 !important;
+    padding-bottom: 20px;
+    font-size: 2rem; /* Slightly smaller on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .password-container {
+    width: 95%;
+    padding: 20px 10px;
+  }
+  
+  .password-container h1 {
+    text-align: center !important;
+    padding: 0 !important;
+    padding-bottom: 20px;
+    font-size: 1.75rem; /* Even smaller on very small screens */
+  }
+}
+
 /* Responsive Adjustments */
 @media (max-width: 600px) {
   .competitor-row {
@@ -467,19 +517,25 @@ input[type="range"]::-webkit-slider-thumb {
   }
   
   .form-nav {
-    flex-direction: column;
+    flex-direction: row; /* Keep buttons side by side */
+    justify-content: space-between; /* Space them apart */
     gap: 15px;
-    margin-top: 1px;
+    margin-top: 40px;
   }
   
   .btn {
-    width: 30%;
-    padding: 12px 50px;
+    width: auto; /* Let buttons size naturally */
+    min-width: 120px; /* Minimum width for touch targets */
+    padding: 12px 30px; /* Slightly smaller padding */
     justify-content: center;
   }
   
+  .btn-back {
+    margin-right: auto; /* Push to left */
+  }
+  
   .btn-next, .btn-submit {
-    margin-left: 0;
+    margin-left: auto; /* Push to right */
   }
   
   .personality-slider-group {
