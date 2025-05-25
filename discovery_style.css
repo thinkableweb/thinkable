@@ -108,7 +108,7 @@ p {
 
 .password-form .btn {
   width: 100%;
-  padding: 12px 15px;
+  padding: 18px 18px;
   border-radius: 200px !important;
   background-color: var(--thinkable-color);
   color: var(--white);
