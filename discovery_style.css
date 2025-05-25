@@ -88,7 +88,7 @@ p {
 }
 
 .password-form input::placeholder {
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 .password-form input:focus {
