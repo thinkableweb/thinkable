@@ -17,7 +17,7 @@ body {
 }
 
 /* Wrapper and column classes */
-.copy-wrap {
+/*.copy-wrap {
   width: 100%;
   max-width: 100%;
   padding-left: 0px;
@@ -33,7 +33,7 @@ body {
   margin-right: auto;
 }
 
-/* Password Protection Styles - Updated */
+/* Password Protection Styles */
 .password-protection-layer {
   position: fixed;
   top: 0;
@@ -45,6 +45,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+   text-align: center;
   transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
@@ -52,24 +53,23 @@ body {
   background-color: var(--white);
   padding: 40px 20px;
   width: 80%;
-  max-width: 600px; /* Add max-width for better control */
   text-align: center;
   animation: fadeIn 0.5s ease;
 }
 
-/* Fix H1 title centering across all breakpoints */
-.password-container h1 {
-  text-align: center !important;
-  padding: 0 !important; /* Remove all padding */
-  margin-bottom: 20px;
+/* Apply your text classes in HTML instead */
+.password-container h1,
+.form-header h1 {
+  padding-bottom: 20px;
   color: var(--thinkable-color);
   width: 100%;
 }
 
-.password-container p {
-  text-align: center;
+.password-container p,
+.subtitle,
+.helper-text,
+p {
   color: var(--thinkable-color);
-  margin-bottom: 15px;
 }
 
 .password-form {
@@ -109,14 +109,12 @@ body {
   padding-bottom: 17px;
 }
 
-/* Add full corner radius to Begin Discovery button */
 .password-form .btn {
   width: 100%;
-  padding: 14px;
+  padding: 12px 15px;
+  border-radius: 200px !important;
   background-color: var(--thinkable-color);
   color: var(--white);
-  border: none;
-  border-radius: 50px; /* Full corner radius */
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -132,38 +130,11 @@ body {
   opacity: 0;
   transition: opacity 0.3s ease;
   width: 100%;
-  text-align: center;
 }
 
 .error-message.visible {
   opacity: 1;
 }
-
-/* Responsive adjustments for password protection */
-@media (max-width: 768px) {
-  .password-container {
-    width: 90%;
-    padding: 30px 15px;
-  }
-  
-  .password-container h1 {
-    text-align: center !important;
-    padding: 0 !important;
-    font-size: 2rem; /* Slightly smaller on mobile */
-  }
-}
-
-@media (max-width: 480px) {
-  .password-container {
-    width: 95%;
-    padding: 20px 10px;
-  }
-  
-  .password-container h1 {
-    text-align: center !important;
-    padding: 0 !important;
-    font-size: 1.75rem; /* Even smaller on very small screens */
-  }
 
 /* Shake animation for wrong password */
 @keyframes shake {
