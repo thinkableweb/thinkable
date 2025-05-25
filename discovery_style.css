@@ -16,22 +16,7 @@ body {
   color: var(--thinkable-color);
 }
 
-/* Wrapper and column classes */
-.copy-wrap {
-  width: 100%;
-  max-width: 100%;
-  padding-left: 0px;
-  padding-right: 0px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
-.body-clm {
-  width: 100%;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 /* Password Protection Styles - Updated */
 .password-protection-layer {
