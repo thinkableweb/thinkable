@@ -17,7 +17,7 @@ body {
 }
 
 /* Wrapper and column classes */
-/*.copy-wrap {
+.copy-wrap {
   width: 100%;
   max-width: 100%;
   padding-left: 0px;
@@ -164,6 +164,7 @@ body {
     padding: 0 !important;
     font-size: 1.75rem; /* Even smaller on very small screens */
   }
+
 /* Shake animation for wrong password */
 @keyframes shake {
   0%, 100% { transform: translateX(0); }
