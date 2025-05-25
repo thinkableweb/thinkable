@@ -56,11 +56,8 @@ body {
   text-align: center;
   animation: fadeIn 0.5s ease;
 }
-/* Fix H1 title centering across all breakpoints */
 .password-container h1,
 .form-header h1 {
-  text-align: center !important;
-  padding: 0 !important; /* Remove all padding */
   padding-bottom: 20px;
   color: var(--thinkable-color);
   width: 100%;
