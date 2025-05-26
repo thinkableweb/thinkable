@@ -58,7 +58,7 @@ body {
 .helper-text,
 p {
   color: var(--thinkable-color);
-  text-align: center;
+  text-align: right;
   margin-bottom: 15px;
 }
 
