@@ -46,8 +46,6 @@ body {
 /* Fix H1 title centering across all breakpoints */
 .password-container h1,
 .form-header h1 {
-  
-  padding: 0 !important; /* Remove all padding */
   padding-bottom: 20px;
   color: var(--thinkable-color);
   width: 100%;
@@ -58,7 +56,6 @@ body {
 .helper-text,
 p {
   color: var(--thinkable-color);
-  text-align: right;
   margin-bottom: 15px;
 }
 
