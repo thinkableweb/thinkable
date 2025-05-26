@@ -16,7 +16,22 @@ body {
   color: var(--thinkable-color);
 }
 
+/* Wrapper and column classes */
+.copy-wrap {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.body-clm {
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* Password Protection Styles - Updated */
 .password-protection-layer {
@@ -46,6 +61,8 @@ body {
 /* Fix H1 title centering across all breakpoints */
 .password-container h1,
 .form-header h1 {
+  text-align: center !important;
+  padding: 0 !important; /* Remove all padding */
   padding-bottom: 20px;
   color: var(--thinkable-color);
   width: 100%;
@@ -56,6 +73,7 @@ body {
 .helper-text,
 p {
   color: var(--thinkable-color);
+  text-align: center;
   margin-bottom: 15px;
 }
 
@@ -85,7 +103,7 @@ p {
 }
 
 .password-form input::placeholder {
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 .password-form input:focus {
@@ -119,6 +137,7 @@ p {
   opacity: 0;
   transition: opacity 0.3s ease;
   width: 100%;
+  text-align: center;
 }
 
 .error-message.visible {
@@ -498,25 +517,19 @@ input[type="range"]::-webkit-slider-thumb {
   }
   
   .form-nav {
-    flex-direction: row; /* Keep buttons side by side */
-    justify-content: space-between; /* Space them apart */
+    flex-direction: column;
     gap: 15px;
-    margin-top: 40px;
+    margin-top: 1px;
   }
   
   .btn {
-    width: auto; /* Let buttons size naturally */
-    min-width: 120px; /* Minimum width for touch targets */
-    padding: 12px 30px; /* Slightly smaller padding */
+    width: 30%;
+    padding: 12px 50px;
     justify-content: center;
   }
   
-  .btn-back {
-    margin-right: auto; /* Push to left */
-  }
-  
   .btn-next, .btn-submit {
-    margin-left: auto; /* Push to right */
+    margin-left: 0;
   }
   
   .personality-slider-group {
