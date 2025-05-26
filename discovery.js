@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Revolutionary brand analysis based on Thinkable philosophy
     if (mainstreamQuirky > 60 && innovativeTraditional < 50 && casualElegant < 60) {
-      insight = "Revolutionary Disruptor: Your brand is positioned to challenge conventions and rewrite industry rules. This combination suggests you're ready to break the mold and create new market categories.";
+      insight = "Revolutionary Disruptor: Your brand is positioned to challenge conventions and rewrite industry rules. This combination suggests you’re ready to break the mold and create new market categories.";
     } else if (luxuryAffordable < 40 && detailedMinimalist > 60 && casualElegant > 50) {
       insight = "Premium Minimalist: Your brand commands attention through sophisticated simplicity. You're positioned to lead through understated excellence and refined experiences.";
     } else if (innovativeTraditional < 40 && mainstreamQuirky < 40) {
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else if (mainstreamQuirky > 70 && casualElegant < 40) {
       insight = "Quirky Authority: Your brand combines unconventional thinking with serious expertise. This positioning can make complex ideas memorable and engaging.";
     } else if (detailedMinimalist < 30 && luxuryAffordable < 30) {
-      insight = "Luxury Maximalist: Your brand believes in abundant, rich experiences. You're positioned to create brands that feel exclusive and comprehensive.";
+      insight = "Luxury Maximalist: Your brand believes in abundant, rich experiences. You’re positioned to create brands that feel exclusive and comprehensive.";
     } else {
       insight = "Balanced Revolutionary: Your brand has the flexibility to lead change while maintaining broad appeal. This adaptability can be a powerful strategic advantage when applied with conviction.";
     }
