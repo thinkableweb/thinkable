@@ -82,8 +82,8 @@ a[id*="underline-link"]:hover::after {
 /* Image Stack Styles */
 .image-stack {
   position: relative;
-  width: 101%;
-  padding-bottom: 101%; /* 1:1 Aspect ratio */
+  width: 100%;
+  padding-bottom: 100%; /* 1:1 Aspect ratio */
   background-color: currentColor;
 }
 .blend-background {
